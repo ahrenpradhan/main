@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "deploy" ]
+    branches: [ "deploy","dev" ]
 
 jobs:
   build:
@@ -25,6 +25,7 @@ jobs:
         cache: 'npm'
     - run: yarn
     - run: yarn test
-    - run: pm2 delete main
+    # - run: pm2 delete main
     - run: yarn build
-    - run: pm2 start yarn --name "main" -- host
+    # - run: pm2 start yarn --name "main" -- host
+    - run: pm2 reload all
