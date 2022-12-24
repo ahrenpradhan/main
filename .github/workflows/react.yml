@@ -23,9 +23,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm i
-    - run: npm test
+    - run: yarn
+    - run: yarn test
     - run: pm2 delete main
-    - run: npm run build
-    - run: pm2 start main
-    - run: pm2 start npm --name "main" -- run host
+    - run: yarn build
+    - run: pm2 start yarn --name "main" -- host
