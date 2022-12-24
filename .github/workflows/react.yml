@@ -28,4 +28,4 @@ jobs:
     - run: pm2 delete main
     - run: npm run build
     - run: pm2 start main
-    - run: pm2 start npm --name "main" --run host
+    - run: pm2 start npm --name "main" -- run host
