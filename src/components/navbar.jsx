@@ -2,7 +2,7 @@ import { MdMenu } from 'react-icons/md';
 
 const NavBar = () => (
   <>
-    <div className="container fixed flex h-20 justify-between border-b-2 backdrop-blur">
+    <div className="fixed flex h-20 min-w-full justify-between border-b-2 backdrop-blur">
       <div className="self-center px-5">
         <span className="text-2xl">AP</span>
       </div>
