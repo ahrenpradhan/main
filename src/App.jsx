@@ -1,24 +1,27 @@
+import backgroundImage from './assets/images/background.jpg';
 import logo from './assets/images/logo.svg';
 import profileImage from './assets/images/profile.jpeg';
+import CountDown from './components/countdown';
 import Divider from './components/divider';
 import NavBar from './components/navbar';
 import status from './constants/status';
 import work from './constants/work';
-import useCountdown from './hooks/useCountDown';
 
 function App() {
-  const [days, hours, minutes, seconds] = useCountdown(
-    status?.notice_period_expiration
-  );
   return (
     <div className=" min-h-screen bg-zinc-200 bg-opacity-60">
       <div
-        className="fixed h-screen w-screen bg-cover bg-center"
+        className="fixed h-screen w-screen"
         style={{
-          backgroundImage: 'url(./src/assets/images/background.jpg)',
           zIndex: -1
         }}
-      />
+      >
+        <img
+          className="h-full w-full object-cover"
+          src={backgroundImage}
+          alt="background"
+        />
+      </div>
       <NavBar />
       {/* section 1 - intro */}
       <section className="container m-auto mb-8 flex min-h-screen flex-col justify-center py-16 px-8 text-center md:flex-row md:justify-evenly md:px-8 md:text-left">
@@ -89,41 +92,45 @@ function App() {
         </div>
       </section>
       {/* section 3 - current status */}
-      <section className="container m-auto p-4">
+      <section className="container m-auto p-4 pb-32">
         <Divider />
         <div className="min-w-full pb-8 text-center text-3xl font-bold tracking-wide">
           At present
         </div>
-        {status?.notice_period_expiration ? (
-          <div>
-            <div>
-              Currently in notice period, available to opportunities till
+        <div className="md:flex md:justify-around ">
+          {status?.notice_period_expiration ? (
+            <div className="self-center pb-6 text-center">
+              <span className="italic">
+                "Serving notice period and open to offers..."
+              </span>
+              <br />
+              <br />
+              <CountDown targetTime={status?.notice_period_expiration} />
             </div>
-            <div>
-              {new Date(status?.notice_period_expiration).toDateString()}
-            </div>
-          </div>
-        ) : (
-          false
-        )}
-        {status?.current_company ? (
+          ) : (
+            false
+          )}
           <div>
-            <div> Currently in </div>
-            <div>{status?.current_company}</div>
+            {status?.current_company ? (
+              <div className="pb-6 text-center">
+                <div>Currently in</div>
+                <div className="font-bold">{status?.current_company}</div>
+              </div>
+            ) : (
+              false
+            )}
+            {status?.outsourced_to_company ? (
+              <div className="pb-6 text-center">
+                <div>Outsourced to</div>
+                <div className="font-bold">{status?.outsourced_to_company}</div>
+              </div>
+            ) : (
+              false
+            )}
           </div>
-        ) : (
-          false
-        )}
-        {status?.outsourced_to_company ? (
-          <div>
-            <div> Outsourced to </div>
-            <div>{status?.outsourced_to_company}</div>
-          </div>
-        ) : (
-          false
-        )}
+        </div>
       </section>
-
+      {/* dummy content */}
       <header className="app-header">
         <img src={logo} className="app-logo" alt="logo" />
         <p className="header">Vite React Starter 💯</p>
