@@ -13,24 +13,6 @@ export default [
     tech: [`NEXTJS`, `GraphQl`, `Atomic Design`, `Vercel`]
   },
   {
-    title: 'CommerceTools Integration',
-    company: 'Algolia - Commercetools',
-    description: `Create a ready-to-use starter template app for commercetools marketplace to support algolia API.`,
-    tech: [
-      `Algolia`,
-      `CommerceTools`,
-      `ReactJs`,
-      'ApolloGraphql',
-      `TypeScript`,
-      'husky',
-      'GraphQl',
-      'Jest',
-      'AWS Lambda',
-      'GCP2 cloud',
-      'terraform'
-    ]
-  },
-  {
     title: 'Skynet Admin Dashboard',
     company: 'TagTaste',
     description: `Feature requests and maintenance on TagTaste admin frontend.`,
@@ -52,6 +34,24 @@ export default [
     company: 'TagTaste',
     description: `Site maintenance and feature requests.`,
     tech: [`ReactJs`, 'Redux', 'Sass']
+  },
+  {
+    title: 'Algolia Integration in framework',
+    company: 'Algolia - Commercetools',
+    description: `Create a ready-to-use starter template app for commercetools marketplace to support algolia API.`,
+    tech: [
+      `Algolia`,
+      `CommerceTools`,
+      `ReactJs`,
+      'ApolloGraphql',
+      `TypeScript`,
+      'husky',
+      'GraphQl',
+      'Jest',
+      'AWS Lambda',
+      'GCP2 cloud',
+      'terraform'
+    ]
   }
 ]
   .map((_, index) => ({ ..._, id: index }))

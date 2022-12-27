@@ -1,4 +1,5 @@
 import logo from './assets/images/logo.svg';
+import Divider from './components/divider';
 import NavBar from './components/navbar';
 import work from './constants/work';
 
@@ -7,7 +8,7 @@ function App() {
     <div className="color min-h-screen bg-zinc-50">
       <NavBar />
       {/* section 1 - intro */}
-      <section className="mb-8 p-8 text-center">
+      <section className="container m-auto mb-8 p-8 text-center">
         <div className="pt-2 pb-6 text-lg tracking-wide">Hey there !!</div>
         <div className="pb-8 text-3xl font-bold tracking-wider">
           Ahren Pradhan,
@@ -18,48 +19,51 @@ function App() {
         </div>
       </section>
       {/* section 2 - work */}
-      <section className="flex-wrap p-4 md:flex md:justify-around md:gap-4">
+      <section className="container m-auto p-4">
+        <Divider />
         <div className="min-w-full pb-8 text-center text-3xl font-bold tracking-wide">
           My Work
         </div>
-        {work.map(_ => (
-          <div
-            className="mb-8 flex flex-col overflow-hidden rounded-xl border bg-white shadow hover:shadow-lg md:w-2/5"
-            key={_.id}
-          >
-            <img
-              src={`https://picsum.photos/400/200?random=${_.id}`}
-              alt="random"
-              className="min-w-full object-cover "
-              style={{ minHeight: 200 }}
-            />
-            <div className="flex flex-1 flex-col justify-between pt-4 px-8">
-              <div className="text-lg font-bold">
-                {_?.title || 'Loading...'}
-              </div>
-              <div className="mb-2 text-sm italic">
-                {_?.company || 'Loading...'}
-              </div>
-              <div className="flex-1 pb-2">
-                {_?.description || 'Loading...'}
-              </div>
-              {_?.tech ? (
-                <div className="flex flex-wrap gap-4 py-4 md:pt-4 md:pb-6 text-sm">
-                  {_?.tech.map(_ => (
-                    <div className="rounded-full border bg-zinc-100 px-2 tracking-wide shadow-sm hover:shadow">
-                      {_}
-                    </div>
-                  ))}
-                  {/* <span></span> */}
+        <div className="min-w-full flex-wrap md:flex md:w-2/5 md:justify-around md:gap-4">
+          {work.map(_ => (
+            <div
+              className="work-list-item mb-8 flex flex-col overflow-hidden rounded-xl border bg-white shadow hover:shadow-lg md:w-2/5 first:md:min-w-full"
+              key={_.id}
+            >
+              <img
+                src={`https://picsum.photos/400/200?random=${_.id}`}
+                alt="random"
+                className="min-w-full object-cover "
+                style={{ minHeight: 200 }}
+              />
+              <div className="flex flex-1 flex-col justify-between px-8 pt-4">
+                <div className="text-lg font-bold">
+                  {_?.title || 'Loading...'}
                 </div>
-              ) : (
-                false
-              )}
+                <div className="mb-2 text-sm italic">
+                  {_?.company || 'Loading...'}
+                </div>
+                <div className="flex-1 pb-2">
+                  {_?.description || 'Loading...'}
+                </div>
+                {_?.tech ? (
+                  <div className="flex flex-wrap gap-4 py-4 text-sm md:pt-4 md:pb-6">
+                    {_?.tech.map(_ => (
+                      <div className="rounded-full border bg-zinc-100 px-2 tracking-wide shadow-sm hover:shadow">
+                        {_}
+                      </div>
+                    ))}
+                    {/* <span></span> */}
+                  </div>
+                ) : (
+                  false
+                )}
 
-              {/* {(_?.tech || ['Loading...'])?.join(' | ')} */}
+                {/* {(_?.tech || ['Loading...'])?.join(' | ')} */}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       <header className="app-header">
