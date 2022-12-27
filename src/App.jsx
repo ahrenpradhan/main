@@ -1,5 +1,7 @@
+import { Helmet } from 'react-helmet-async';
+
 import backgroundImage from './assets/images/background.jpg';
-import logo from './assets/images/logo.svg';
+// import logo from './assets/images/logo.svg';
 import profileImage from './assets/images/profile.jpeg';
 import CountDown from './components/countdown';
 import Divider from './components/divider';
@@ -7,8 +9,38 @@ import NavBar from './components/navbar';
 import status from './constants/status';
 import work from './constants/work';
 
-function App() {
-  return (
+const AppSEO = () => (
+  <Helmet>
+    {/* Standard metadata tags */}
+    <title>FullStack Developer - Ahren Pradhan!</title>
+    <meta
+      name="description"
+      content="Ahren Pradhan is a fullstack developer who can help one jump start their project."
+    />
+    {/* End standard metadata tags */}
+    {/* Facebook tags */}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="FullStack Developer for web and app" />
+    <meta
+      property="og:description"
+      content="Ahren Pradhan is a fullstack developer who can help one jump start their project"
+    />
+    {/* End Facebook tags */}
+    {/* Twitter tags */}
+    <meta name="twitter:creator" content="ahrenpradhan" />
+    <meta name="twitter:card" content="article" />
+    <meta name="twitter:title" content="FullStack Developer for web and app" />
+    <meta
+      name="twitter:description"
+      content="Ahren Pradhan is a fullstack developer who can help one jump start their project"
+    />
+    {/* End Twitter tags */}
+  </Helmet>
+);
+
+const App = () => (
+  <>
+    <AppSEO />
     <div className=" min-h-screen bg-zinc-200 bg-opacity-60">
       <div
         className="fixed h-screen w-screen"
@@ -101,7 +133,7 @@ function App() {
           {status?.notice_period_expiration ? (
             <div className="self-center pb-6 text-center">
               <span className="italic">
-                "Serving notice period and open to offers..."
+                &quot;Serving notice period and open to offers...&quot;
               </span>
               <br />
               <br />
@@ -131,7 +163,7 @@ function App() {
         </div>
       </section>
       {/* dummy content */}
-      <header className="app-header">
+      {/* <header className="app-header">
         <img src={logo} className="app-logo" alt="logo" />
         <p className="header">Vite React Starter 💯</p>
         <p>
@@ -142,9 +174,9 @@ function App() {
           <br />
           Jest + Testing Library
         </p>
-      </header>
+      </header> */}
     </div>
-  );
-}
+  </>
+);
 
 export default App;
