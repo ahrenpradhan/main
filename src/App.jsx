@@ -1,4 +1,5 @@
 import logo from './assets/images/logo.svg';
+import profileImage from './assets/images/profile.jpeg';
 import Divider from './components/divider';
 import NavBar from './components/navbar';
 import work from './constants/work';
@@ -8,14 +9,23 @@ function App() {
     <div className="color min-h-screen bg-zinc-50">
       <NavBar />
       {/* section 1 - intro */}
-      <section className="container m-auto mb-8 p-8 text-center">
-        <div className="pt-2 pb-6 text-lg tracking-wide">Hey there !!</div>
-        <div className="pb-8 text-3xl font-bold tracking-wider">
-          Ahren Pradhan,
-          <br /> WEB Developer, <br /> Tech Lead
+      <section className="md:text-left container m-auto mb-8 flex min-h-screen flex-col justify-center p-8 text-center md:flex-row md:justify-evenly">
+        <div className="self-center">
+          <div className="pt-2 pb-6 text-lg tracking-wide">Hey there !!</div>
+          <div className="pb-8 text-3xl font-bold tracking-wider">
+            Ahren Pradhan,
+            <br /> WEB Developer, <br /> Tech Lead
+          </div>
+          <div className="pb-10 text-lg tracking-wider">
+            This is Ahren, feel free to contact me for help and opportunities
+          </div>
         </div>
-        <div className="text-lg tracking-wider">
-          This is Ahren, feel free to contact me for help and opportunities
+        <div className="self-center">
+          <img
+            src={profileImage}
+            className="m-auto w-1/2 rounded-full md:w-2/3"
+            alt="logo"
+          />
         </div>
       </section>
       {/* section 2 - work */}
