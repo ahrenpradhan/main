@@ -1,6 +1,6 @@
-import { MdMenu } from 'react-icons/md';
+import { MdMenu, MdClose } from 'react-icons/md';
 
-const NavBar = () => (
+const NavBar = ({ drawerOpen, handleDrawerToggle }) => (
   <>
     <div className="fixed h-16 min-w-full bg-zinc-100 opacity-20" />
     <div className=" fixed min-w-full border-b-2 border-y-zinc-50 border-opacity-20 backdrop-blur ">
@@ -8,12 +8,23 @@ const NavBar = () => (
         <div className="self-center px-5">
           <span className="text-2xl">AP</span>
         </div>
-        <div className="self-center px-5">
-          <MdMenu size="28" />
+        {/* mobile */}
+        <div className="self-center px-5 md:hidden">
+          <button onClick={handleDrawerToggle} type="button">
+            {drawerOpen ? <MdClose size="28" /> : <MdMenu size="28" />}
+          </button>
+        </div>
+        {/* desktop */}
+        <div className="hidden gap-4 self-center px-5 md:flex">
+          <button type="button">Work</button>
+          <button type="button">Present</button>
         </div>
       </div>
     </div>
   </>
 );
+NavBar.defaultProps = {
+  drawerOpen: false
+};
 
 export default NavBar;
