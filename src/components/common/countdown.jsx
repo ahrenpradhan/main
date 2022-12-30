@@ -1,4 +1,4 @@
-import useCountdown from '../hooks/useCountDown';
+import { useCountdown } from '../../hooks/common/index';
 
 const CountDown = ({ targetTime }) => {
   const [days, hours, minutes, seconds] = useCountdown(targetTime);
