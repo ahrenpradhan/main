@@ -6,5 +6,9 @@ export default [
   {
     name: 'Present',
     link: '/#present'
+  },
+  {
+    name: 'Blogs',
+    link: '/#blogs'
   }
 ];
