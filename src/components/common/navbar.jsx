@@ -1,4 +1,7 @@
 import { MdMenu, MdClose } from 'react-icons/md';
+import { HashLink } from 'react-router-hash-link';
+
+import navlist from '../../constants/navlist';
 
 const NavBar = ({ drawerOpen, handleDrawerToggle }) => (
   <>
@@ -16,8 +19,13 @@ const NavBar = ({ drawerOpen, handleDrawerToggle }) => (
         </div>
         {/* desktop */}
         <div className="hidden gap-4 self-center px-5 md:flex">
-          <button type="button">Work</button>
-          <button type="button">Present</button>
+          {navlist.map(_ => (
+            <HashLink key={_.name} smooth to={_.link}>
+              <button className="p-4" type="button">
+                {_.name}
+              </button>
+            </HashLink>
+          ))}
         </div>
       </div>
     </div>

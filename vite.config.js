@@ -10,5 +10,8 @@ export default defineConfig({
         plugins: ['@emotion/babel-plugin']
       }
     })
-  ]
+  ],
+  optimizeDeps: {
+    // include: ['react-router-dom']
+  }
 });
