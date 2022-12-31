@@ -5,8 +5,8 @@ import navlist from '../../constants/navlist';
 
 const NavBar = ({ drawerOpen, handleDrawerToggle }) => (
   <>
-    <div className="fixed h-16 min-w-full bg-zinc-100 opacity-20" />
-    <div className=" fixed min-w-full border-b-2 border-y-zinc-50 border-opacity-20 backdrop-blur ">
+    <div className="fixed right-0 left-0 h-16 border-b-2 border-y-zinc-50 bg-zinc-100 opacity-40 md:left-12" />
+    <div className=" md:left-12 fixed right-0 left-0 border-opacity-20 backdrop-blur">
       <div className=" m-auto flex h-16 justify-between md:container md:min-w-fit">
         <div className="self-center px-5">
           <span className="text-2xl">AP</span>
