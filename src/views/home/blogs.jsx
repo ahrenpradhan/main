@@ -1,14 +1,13 @@
 // import { convert } from 'html-to-text';
 
-import { Divider } from '../../components/common';
-import useMedium from '../../hooks/useMedium';
+import { Divider } from '@/Components/common';
+import useMedium from '@/Hooks/useMedium';
 // section 4 - blogs
 
 const Blogs = () => {
   const [mediumBlogData] = useMedium();
   if (!mediumBlogData) return <div>Loading...</div>;
   const { feed, items, status } = mediumBlogData;
-  console.log(items);
   return (
     <section className="container m-auto px-4 pt-4 pb-16" id="blogs">
       <Divider />
@@ -45,10 +44,10 @@ const Blogs = () => {
                 </div> */}
                 {_?.categories ? (
                   <div className="flex flex-wrap gap-4 py-4 text-sm md:pt-4 md:pb-6">
-                    {_?.categories.map((_category, index) => (
+                    {_?.categories.map((_category, _cIndex) => (
                       <div
-                        key={_category || `category${index}`}
-                        className="rounded-full border bg-zinc-100 px-2 tracking-wide shadow-sm hover:shadow"
+                        key={_category || `category${_cIndex}`}
+                        className="rounded-full border bg-zinc-100 px-2 capitalize tracking-wide shadow-sm hover:shadow"
                       >
                         {_category || 'none'}
                       </div>

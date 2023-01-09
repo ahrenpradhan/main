@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -11,7 +12,16 @@ export default defineConfig({
       }
     })
   ],
-  optimizeDeps: {
-    // include: ['react-router-dom']
-  }
+  resolve: {
+    alias: [
+      { find: '@/', replacement: '/src' },
+      { find: '@/Assets', replacement: '/src/assets' },
+      { find: '@/Components', replacement: '/src/components' },
+      { find: '@/Context', replacement: '/src/context' },
+      { find: '@/Constants', replacement: '/src/constants' },
+      { find: '@/Hooks', replacement: '/src/hooks' },
+      { find: '@/Views', replacement: '/src/views' }
+    ]
+  },
+  optimizeDeps: {}
 });

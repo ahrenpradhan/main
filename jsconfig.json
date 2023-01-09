@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "baseUrl": "./src",
+    "paths": {
+      "@/Context": ["src/context/*"]
+    }
+  }
+}
