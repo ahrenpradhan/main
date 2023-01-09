@@ -9,16 +9,20 @@ import App from './App';
 
 import './index.css';
 
+import RootContextProvider from '@/Context';
+
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
       <BrowserRouter>
-        <QueryClientProvider client={queryClient}>
-          {import.meta.env.DEV ? <ReactQueryDevtools initialIsOpen /> : false}
-          <App />
-        </QueryClientProvider>
+        <RootContextProvider>
+          <QueryClientProvider client={queryClient}>
+            {import.meta.env.DEV ? <ReactQueryDevtools initialIsOpen /> : false}
+            <App />
+          </QueryClientProvider>
+        </RootContextProvider>
       </BrowserRouter>
     </HelmetProvider>
   </React.StrictMode>

@@ -1,15 +1,19 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Layout from './components/layout';
-import Home from './views/home';
+import Layout from '@/Components/layout';
+import useFirebase from '@/Hooks/firebase';
+import Home from '@/Views/home';
 
-const App = () => (
-  <Routes>
-    <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
-    </Route>
-    {/* <Route render={() => <Redirect to="/" />} /> */}
-  </Routes>
-);
+const App = () => {
+  useFirebase();
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+      </Route>
+      {/* <Route render={() => <Redirect to="/" />} /> */}
+    </Routes>
+  );
+};
 
 export default App;
