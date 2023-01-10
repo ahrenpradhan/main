@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import backgroundImage from '../../assets/images/background.jpg';
 import { NavBar, Drawer, AppSEO, Footer } from '../common';
 import LeftSideBar from './leftSideBar';
+
+import backgroundImage from '@/Assets/images/background.jpg';
 
 const LayoutComponent = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
