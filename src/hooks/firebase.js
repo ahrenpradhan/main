@@ -7,6 +7,8 @@ import { initializeApp } from 'firebase/app';
 // Initialize Firebase
 
 const useFirebase = () => {
+  let app;
+  let analytics;
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
@@ -18,8 +20,10 @@ const useFirebase = () => {
     appId: import.meta.env.VITE_FIREBASE_APP_ID,
     measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
   };
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  if (import.meta.env.PROD) {
+    app = initializeApp(firebaseConfig);
+    analytics = getAnalytics(app);
+  }
   return { app, analytics };
 };
 

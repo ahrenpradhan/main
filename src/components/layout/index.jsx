@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import backgroundImage from '../../assets/images/background.jpg';
-import { NavBar, Drawer, AppSEO } from '../common';
+import { NavBar, Drawer, AppSEO, Footer } from '../common';
 import LeftSideBar from './leftSideBar';
 
 const LayoutComponent = () => {
@@ -27,12 +27,13 @@ const LayoutComponent = () => {
       </div>
       <Drawer drawerOpen={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
       <LeftSideBar />
-      <div className="md:pl-12">
+      <div className="md:pl-12 min-h-screen bg-zinc-200 bg-opacity-60">
         <NavBar
           drawerOpen={drawerOpen}
           handleDrawerToggle={handleDrawerToggle}
         />
         <Outlet />
+        <Footer />
       </div>
     </>
   );
