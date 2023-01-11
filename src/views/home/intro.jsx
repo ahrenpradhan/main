@@ -1,4 +1,4 @@
-import profileImage from '../../assets/images/profile.jpeg';
+import profileImage from '@/Assets/ahren/profile.jpeg';
 
 // section 1 - intro
 const Intro = () => (
