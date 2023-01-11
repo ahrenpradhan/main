@@ -1,9 +1,17 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@/Context": ["src/context/*"]
+      "@/Assets/*": ["./src/assets/*"],
+      "@/Components/*": ["./src/components/*"],
+      "@/Context/*": ["./src/context/*"],
+      "@/Constants/*": ["./src/constants/*"],
+      "@/Hooks/*": ["./src/hooks/*"],
+      "@/Views/*": ["./src/views/*"]
     }
-  }
+  },
+  // "checkJs": true,
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

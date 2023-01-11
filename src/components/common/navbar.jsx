@@ -9,7 +9,9 @@ const NavBar = ({ drawerOpen, handleDrawerToggle }) => (
     <div className=" md:left-12 fixed right-0 left-0 border-opacity-20 backdrop-blur">
       <div className=" m-auto flex h-16 justify-between md:container md:min-w-fit">
         <div className="self-center px-5">
+        <HashLink smooth to="/#">
           <span className="text-2xl">AP</span>
+          </HashLink>
         </div>
         {/* mobile */}
         <div className="self-center px-5 md:hidden">

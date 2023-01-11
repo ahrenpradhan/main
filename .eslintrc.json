@@ -67,13 +67,20 @@
     "react/function-component-definition": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "warn",
-    "semi": "error"
+    "semi": "error",
+    "import/no-unresolved": 0,
+    "import/extensions": 0
   },
   "settings": {
     "import/resolvers": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
       "alias": [
+        ["@/Assets/*", "./src/assets/*"],
         ["@/Context/*", "./src/context/*"],
-        ["@/Component/*", "./src/components/*"],
+        ["@/Components/*", "./src/components/*"],
         ["@/Hooks/*", "./src/hooks/*"],
         ["@/Constants/*", "./src/constants/*"],
         ["@/Views/*", "./src/views/*"]

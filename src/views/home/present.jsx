@@ -1,11 +1,11 @@
-import { CountDown, Divider } from '../../components/common';
-import status from '../../constants/status';
+import { CountDown, Divider } from '@/Components/common/index';
+import status from '@/Constants/status';
 
 // section 3 - current status
 
 const Present = () => (
   <section
-    className="container m-auto flex min-h-screen flex-col flex-col justify-center p-4 pb-32"
+    className="container m-auto flex min-h-screen flex-col justify-center p-4 pb-32"
     id="present"
   >
     <div>

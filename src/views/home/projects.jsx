@@ -1,18 +1,18 @@
-import { Divider } from '../../components/common';
-import work from '../../constants/work';
+import { Divider } from '@/Components/common';
+import projects from '@/Constants/projects';
 
-// section 2 - work
+// section 2 - projects
 
-const Work = () => (
-  <section className="container m-auto px-4 pt-4 pb-16" id="work">
+const Projects = () => (
+  <section className="container m-auto px-4 pt-4 pb-16" id="projects">
     <Divider />
     <div className="min-w-full pb-8 text-center text-3xl font-bold tracking-wide">
-      My Work
+      Important Projects till date
     </div>
     <div className="min-w-full flex-wrap md:flex md:w-2/5 md:justify-around md:gap-4">
-      {work.map(_ => (
+      {projects.map(_ => (
         <div
-          className="work-list-item mb-8 flex flex-col overflow-hidden rounded-xl border bg-white shadow hover:shadow-lg md:w-5/12 first:md:min-w-full  lg:max-w-md"
+          className="mb-8 flex flex-col overflow-hidden rounded-xl border bg-white shadow hover:shadow-lg md:w-5/12 first:md:min-w-full  lg:max-w-md"
           key={_.id}
         >
           <img
@@ -51,4 +51,4 @@ const Work = () => (
   </section>
 );
 
-export default Work;
+export default Projects;
