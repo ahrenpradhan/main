@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { NavBar, Drawer, AppSEO, Footer } from '../common';
 import LeftSideBar from './leftSideBar';
 
-import backgroundImage from '@/Assets/images/background/main.jpg';
+import backgroundImage from '@/Assets/background/main.jpg';
 
 const LayoutComponent = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
