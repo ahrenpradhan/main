@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Layout from '@/Components/layout/index';
 import useFirebase from '@/Hooks/firebase';
@@ -10,8 +10,8 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
-      {/* <Route render={() => <Redirect to="/" />} /> */}
     </Routes>
   );
 };
