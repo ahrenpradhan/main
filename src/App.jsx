@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Layout from '@/Components/layout';
+import Layout from '@/Components/layout/index';
 import useFirebase from '@/Hooks/firebase';
 import Home from '@/Views/home';
 
