@@ -29,7 +29,8 @@ export default defineConfig({
       '@/Context': path.resolve(__dirname, 'src/context/'),
       '@/Constants': path.resolve(__dirname, 'src/constants/'),
       '@/Hooks': path.resolve(__dirname, 'src/hooks/'),
-      '@/Views': path.resolve(__dirname, 'src/views/')
+      '@/Views': path.resolve(__dirname, 'src/views/'),
+      '@/Utils': path.resolve(__dirname, 'src/utils/'),
     }
   },
   optimizeDeps: {}

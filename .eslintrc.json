@@ -83,7 +83,8 @@
         ["@/Components/*", "./src/components/*"],
         ["@/Hooks/*", "./src/hooks/*"],
         ["@/Constants/*", "./src/constants/*"],
-        ["@/Views/*", "./src/views/*"]
+        ["@/Views/*", "./src/views/*"],
+        ["@/Utils/*", "./src/utils/*"]
       ]
     }
   }

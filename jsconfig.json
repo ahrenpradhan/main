@@ -8,7 +8,8 @@
       "@/Context/*": ["./src/context/*"],
       "@/Constants/*": ["./src/constants/*"],
       "@/Hooks/*": ["./src/hooks/*"],
-      "@/Views/*": ["./src/views/*"]
+      "@/Views/*": ["./src/views/*"],
+      "@/Utils/*": ["./src/utils/*"]
     }
   },
   // "checkJs": true,

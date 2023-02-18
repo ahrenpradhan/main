@@ -1,4 +1,5 @@
 import Blogs from './blogs';
+import Contact from './contact';
 import Intro from './intro';
 // import Present from './present';
 import Projects from './projects';
@@ -11,6 +12,7 @@ const Home = () => (
     {/* <Present /> */}
     <Worked/>
     <Blogs />
+    <Contact />
   </>
 );
 

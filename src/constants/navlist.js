@@ -2,7 +2,7 @@ export default [
   {
     name: 'Intro',
     link: '/#',
-    toTop: true,
+    toTop: true
   },
   {
     name: 'Projects',
@@ -19,5 +19,9 @@ export default [
   {
     name: 'Blogs',
     link: '/#blogs'
+  },
+  {
+    name: 'Contact',
+    link: '/#contact'
   }
 ];
