@@ -8,10 +8,10 @@ export default [
     name: 'Projects',
     link: '/#projects'
   },
-  {
-    name: 'Present',
-    link: '/#present'
-  },
+  // {
+  //   name: 'Present',
+  //   link: '/#present'
+  // },
   {
     name: 'Worked With',
     link: '/#worked'
