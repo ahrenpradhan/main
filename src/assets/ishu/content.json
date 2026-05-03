@@ -14,15 +14,15 @@
         "content_list": [
             {
                 "title": "Solder Wire",
-                "image": "src/assets/ishu/soldered_wire.jpg"
+                "image": "soldered_wire.jpg"
             },
             {
                 "title": "Solder Sticks & Rods",
-                "image": "src/assets/ishu/soldered_rods.jpg"
+                "image": "soldered_rods.jpg"
             },
             {
                 "title": "Solder Bars",
-                "image": "src/assets/ishu/soldered_bricks.png"
+                "image": "soldered_bricks.png"
             }
         ]
     },

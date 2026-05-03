@@ -1,5 +1,14 @@
 import { Divider } from '@/Components/common';
 import content from '@/Assets/ishu/content.json';
+import solderedBricks from '@/Assets/ishu/soldered_bricks.png';
+import solderedRods from '@/Assets/ishu/soldered_rods.jpg';
+import solderedWire from '@/Assets/ishu/soldered_wire.jpg';
+
+const imageMap = {
+  'soldered_wire.jpg': solderedWire,
+  'soldered_rods.jpg': solderedRods,
+  'soldered_bricks.png': solderedBricks,
+};
 
 // section 2 - Products
 
@@ -17,7 +26,7 @@ const Products = () => (
         >
           <div className="relative overflow-hidden bg-slate-100">
             <img
-              src={item.image}
+              src={imageMap[item.image]}
               alt={item.title}
               className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
             />
