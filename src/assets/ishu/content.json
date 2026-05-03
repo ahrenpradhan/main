@@ -1,0 +1,39 @@
+{
+    "navbar":{
+        "company_name": "RP Solders Pvt. Ltd.",
+        "logo": "src/assets/ishu/logo.png"
+    },
+    "section1": {
+        "title": "3 Decades of trust",
+        "description": "Pioneers in Solder Wire, Sticks, Rods and bars since 1999."
+    },
+    "section2": {
+        "title": "Our Products",
+        "description": "We cater to a wide range of industries, including Automotive, Radiators, Heat Exchangers, Electronics & Electrical. Our products are designed to meet the specific needs of each industry, ensuring optimal performance and reliability.",
+        "content_type": "image_list",
+        "content_list": [
+            {
+                "title": "Solder Wire",
+                "image": "src/assets/ishu/soldered_wire.jpg"
+            },
+            {
+                "title": "Solder Sticks & Rods",
+                "image": "src/assets/ishu/soldered_rods.jpg"
+            },
+            {
+                "title": "Solder Bars",
+                "image": "src/assets/ishu/soldered_bricks.png"
+            }
+        ]
+    },
+    "section3": {
+        "title": "Key Sectors",
+        "description": "We cater to a wide range of industries, including:",
+        "content_type": "bullet_list",
+        "content_list": [
+            "Automotive",
+            "Radiators & Heat Exchangers",
+            "Electronics & Electrical"
+        ]
+    }
+}

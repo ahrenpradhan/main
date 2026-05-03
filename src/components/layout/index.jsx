@@ -20,15 +20,15 @@ const LayoutComponent = () => {
           zIndex: -1
         }}
       >
-        <img
+        {/* <img
           className="h-full w-full object-cover"
           src={backgroundImage}
           alt="background"
-        />
+        /> */}
       </div>
       <Drawer drawerOpen={drawerOpen} handleDrawerToggle={handleDrawerToggle} />
-      <LeftSideBar />
-      <div className="md:pl-12 min-h-screen bg-zinc-200 bg-opacity-60">
+      {/* <LeftSideBar /> */}
+      <div className="min-h-screen bg-zinc-200 bg-opacity-60">
         <NavBar
           drawerOpen={drawerOpen}
           handleDrawerToggle={handleDrawerToggle}

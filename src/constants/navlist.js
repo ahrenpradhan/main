@@ -5,7 +5,7 @@ export default [
     toTop: true
   },
   {
-    name: 'Projects',
+    name: 'Our Products',
     link: '/#projects'
   },
   // {
@@ -13,15 +13,11 @@ export default [
   //   link: '/#present'
   // },
   {
-    name: 'Worked With',
-    link: '/#worked'
+    name: 'Key Sectors',
+    link: '/#key_sectors'
   },
   {
-    name: 'Blogs',
-    link: '/#blogs'
-  },
-  {
-    name: 'Contact',
+    name: 'Contact Us',
     link: '/#contact'
   }
 ];

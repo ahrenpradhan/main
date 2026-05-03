@@ -4,31 +4,47 @@ import { ContactForm } from '@/Components/index';
 // section 6 - contact form
 
 const Contact = () => (
-  <section
-    className="container m-auto flex min-h-screen flex-col justify-center p-4 pb-32"
-    id="contact"
-  >
-    <div>
-      <Divider />
-      <div className="min-w-full pb-8 text-center text-3xl font-bold tracking-wide">
-        Have something on your plate!!
+  <section className="container m-auto px-4 py-16" id="contact">
+    <Divider />
+
+    <div className="mx-auto max-w-3xl text-center pb-10">
+      <h2 className="text-3xl font-bold tracking-wide text-slate-900">Get in Touch</h2>
+      <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-600 sm:text-base">
+        Reach out to us for enquiries, orders, or any project support. Our team is available to respond quickly and help you find the right solution.
+      </p>
+    </div>
+
+    <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:shadow-lg">
+        <h3 className="mb-6 text-xl font-semibold text-slate-900">Contact Details</h3>
+        <dl className="space-y-6 text-sm leading-7 text-slate-700 sm:text-base">
+          <div className="grid gap-2 sm:grid-cols-[auto_1fr]">
+            <dt className="font-semibold text-slate-900">Address</dt>
+            <dd className="text-slate-600">
+              71/6 Phase 1,<br />
+              DLF Industrial Area,<br />
+              Faridabad, Haryana - 121003
+            </dd>
+          </div>
+
+          <div className="grid gap-2 sm:grid-cols-[auto_1fr]">
+            <dt className="font-semibold text-slate-900">Phone</dt>
+            <dd className="text-slate-600">
+              +91-129-2277666<br />
+              +91-9639577014
+            </dd>
+          </div>
+
+          <div className="grid gap-2 sm:grid-cols-[auto_1fr]">
+            <dt className="font-semibold text-slate-900">Email</dt>
+            <dd className="text-slate-600">rpi.faridabad@gmail.com</dd>
+          </div>
+        </dl>
       </div>
-      <div className="m-auto pb-4 text-center" style={{ maxWidth: '28em' }}>
-        Need to jump start your project, want some guidance, or just wanna hire
-        me.
-      </div>
-      <div className="m-auto flex flex-col md:justify-around">
+
+      <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:shadow-lg">
+        <h3 className="mb-6 text-xl font-semibold text-slate-900">Send Us a Message</h3>
         <ContactForm />
-        <div className="m-auto pt-10 text-center" style={{ maxWidth: '24em' }}>
-          I will try my best, to get back as soon as possible, but it could take
-          around of 1-3 business days if things are not ideal from my side.
-          <br />
-          <br />
-          Looking forwards to hear from you.
-          <br />
-          <br />
-          Regards.
-        </div>
       </div>
     </div>
   </section>

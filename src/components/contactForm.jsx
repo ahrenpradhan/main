@@ -35,7 +35,7 @@ const ContactForm = () => {
     }
   };
   return (
-    <form action="#" className="m-auto mt-8 w-3/4 space-y-6 md:w-96">
+    <form action="#" className="mt-8 w-full space-y-6">
       <div className="-space-y-px rounded-md shadow-sm">
         <input
           id="first-name"

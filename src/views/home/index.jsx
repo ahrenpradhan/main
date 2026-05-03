@@ -1,17 +1,21 @@
 import Blogs from './blogs';
 import Contact from './contact';
-import Intro from './intro';
+import Intro from './intro2';
 // import Present from './present';
+import Products from './products';
+import Sectors from './sectors';
 import Projects from './projects';
 import Worked from './worked';
 
 const Home = () => (
   <>
     <Intro />
-    <Projects />
+    <Products />
+    <Sectors />
+    {/* <Projects /> */}
     {/* <Present /> */}
-    <Worked/>
-    <Blogs />
+    {/* <Worked/> */}
+    {/* <Blogs /> */}
     <Contact />
   </>
 );
