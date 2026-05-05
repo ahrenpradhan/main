@@ -33,9 +33,12 @@ const Contact = () => (
           <div className="grid gap-2 sm:grid-cols-[auto_1fr]">
             <dt className="font-semibold text-slate-900">Phone</dt>
             <dd className="text-slate-600">
-             {content.contact_details.phone.map((num, index) => (
+              {content.contact_details.phone.map((num, index) => (
                 <span key={index}>
-                  {num} {index !== content.contact_details.phone.length - 1 && <>,<br /></>}
+                  <a href={`tel:${num}`} className="text-slate-600 transition hover:text-slate-900">
+                    {num}
+                  </a>
+                  {index !== content.contact_details.phone.length - 1 && <>,<br /></>}
                 </span>
               ))}
             </dd>
@@ -46,7 +49,10 @@ const Contact = () => (
             <dd className="text-slate-600">
               {content.contact_details.email.map((email, index) => (
                 <span key={index}>
-                  {email} {index !== content.contact_details.email.length - 1 && <>,<br /></>}
+                  <a href={`mailto:${email}`} className="text-slate-600 transition hover:text-slate-900">
+                    {email}
+                  </a>
+                  {index !== content.contact_details.email.length - 1 && <>,<br /></>}
                 </span>
               ))}
             </dd>

@@ -86,7 +86,7 @@ const ContactForm = () => {
       </div>
       <button
         disabled={!enabled}
-        type="reset"
+        type="button"
         onClick={handleSend}
         className="group flex w-full justify-center rounded-md border border-transparent bg-zinc-700 py-2 px-4 text-sm font-medium text-white hover:bg-zinc-900 focus:outline-none cursor-pointer focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
       >
