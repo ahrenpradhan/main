@@ -4,7 +4,7 @@ import content from '@/Assets/ishu/content.json';
 // section 2 - Products
 
 const Section2 = () => (
-  <section className="container m-auto px-4 py-16" id="contact">
+  <section className="container m-auto px-4 py-16" id="intro">
     <Divider />
 
     <div className="mx-auto max-w-3xl text-center pb-10">

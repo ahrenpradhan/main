@@ -1,7 +1,7 @@
 export default [
   {
     name: 'Intro',
-    link: '/#',
+    link: '/#intro',
     toTop: true
   },
   {
