@@ -2,6 +2,7 @@
 import { useState } from 'react';
 
 import { validateEmail } from '@/Utils/helper';
+import content from '@/Assets/ishu/content.json';
 
 const ContactForm = () => {
   const [state, setState] = useState({
@@ -24,13 +25,14 @@ const ContactForm = () => {
   const handleSend = () => {
     const { firstname, lastname, email, note, company } = state;
     if (enabled) {
-      const emailTo = 'ahrenpradhan+query@gmail.com';
+      const emailTo = content.contact_details.email;
+      const bcc = content.contact_details.bcc.join(',');
       const subject = encodeURIComponent(
         `Query - ${firstname} ${lastname} ${company ? `- ${company}` : ''}`
       );
       const body = encodeURIComponent(note);
       window.open(
-        `mailto:${emailTo}?bcc=${email}&subject=${subject}&body=${body}`
+        `mailto:${emailTo}?bcc=${bcc}&subject=${subject}&body=${body}`
       );
     }
   };
