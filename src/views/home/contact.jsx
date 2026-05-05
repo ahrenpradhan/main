@@ -1,5 +1,6 @@
 import { Divider } from '@/Components/common/index';
 import { ContactForm } from '@/Components/index';
+import content from '@/Assets/ishu/content.json';
 
 // section 6 - contact form
 
@@ -21,23 +22,34 @@ const Contact = () => (
           <div className="grid gap-2 sm:grid-cols-[auto_1fr]">
             <dt className="font-semibold text-slate-900">Address</dt>
             <dd className="text-slate-600">
-              71/6 Phase 1,<br />
-              DLF Industrial Area,<br />
-              Faridabad, Haryana - 121003
+              {content.contact_details.address.map((line, index) => (
+                <span key={index}>
+                  {line}{index !== content.contact_details.address.length - 1 && <>,<br /></>}
+                </span>
+              ))}
             </dd>
           </div>
 
           <div className="grid gap-2 sm:grid-cols-[auto_1fr]">
             <dt className="font-semibold text-slate-900">Phone</dt>
             <dd className="text-slate-600">
-              +91-129-2277666<br />
-              +91-9639577014
+             {content.contact_details.phone.map((num, index) => (
+                <span key={index}>
+                  {num} {index !== content.contact_details.phone.length - 1 && <>,<br /></>}
+                </span>
+              ))}
             </dd>
           </div>
 
           <div className="grid gap-2 sm:grid-cols-[auto_1fr]">
             <dt className="font-semibold text-slate-900">Email</dt>
-            <dd className="text-slate-600">rpi.faridabad@gmail.com</dd>
+            <dd className="text-slate-600">
+              {content.contact_details.email.map((email, index) => (
+                <span key={index}>
+                  {email} {index !== content.contact_details.email.length - 1 && <>,<br /></>}
+                </span>
+              ))}
+            </dd>
           </div>
         </dl>
       </div>

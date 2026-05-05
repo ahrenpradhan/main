@@ -5,7 +5,7 @@
     },
     "section1": {
         "title": "3 Decades of trust",
-        "description": "Pioneers in Solder Wire, Sticks, Rods and bars since 1999."
+        "description": "Pioneers in Tin-Lead Alloys & Solder Wire, Sticks, Rods and Bars since 1999."
     },
     "section2": {
         "title": "Our Products",
@@ -34,6 +34,15 @@
             "Automotive",
             "Radiators & Heat Exchangers",
             "Electronics & Electrical"
+        ]
+    },
+    "contact_details": {
+        "email": ["contact@rpsolders.in"],
+        "phone": ["+91-129-2277666", "+91-9639577014"],
+        "address": [
+            "71/6 Phase 1",
+            "DLF Industrial Area",
+            "Faridabad, Haryana - 121003"
         ]
     }
 }
