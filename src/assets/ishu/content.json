@@ -1,7 +1,8 @@
 {
     "navbar":{
         "company_name": "RP Solders Pvt. Ltd.",
-        "logo": "src/assets/ishu/logo.png"
+        "logo": "src/assets/ishu/logo.png",
+        "logo_big": "src/assets/ishu/logo_big.png"
     },
     "section1": {
         "title": "3 Decades of trust",

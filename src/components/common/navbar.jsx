@@ -3,6 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import content from '@/Assets/ishu/content.json';
 import navlist from '../../constants/navlist';
 import logo from '@/Assets/ishu/logo.png';
+import logoBig from '@/Assets/ishu/logo_big.png';
 
 const NavBar = ({ drawerOpen, handleDrawerToggle }) => (
   <>
@@ -12,8 +13,9 @@ const NavBar = ({ drawerOpen, handleDrawerToggle }) => (
         <div className="self-center px-5">
           <HashLink smooth to="/#">
             <div className='flex items-center gap-3'>
-              <img src={logo} alt="Logo" className="h-16 w-auto" style={{ scale: 1.5 }} />
-              <span className="hidden text-lg font-bold tracking-tight text-slate-900 sm:inline">
+              <img src={logo} alt="Logo" className="md:hidden h-16 w-auto" style={{ scale: 1.5 }} />
+              <img src={logoBig} alt="Logo" className="hidden md:block h-16 w-auto" style={{ scale: 1.5 }} />
+              <span className="md:hidden text-lg font-bold tracking-tight text-slate-900">
                 {content.navbar.company_name}
               </span>
             </div>
